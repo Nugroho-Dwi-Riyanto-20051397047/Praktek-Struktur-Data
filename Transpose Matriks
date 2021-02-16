@@ -1,0 +1,33 @@
+include <iostream>
+
+using namespace std;
+
+int main(){
+  int i, j, b, k, matriks[10][10], transpose[10][10];
+
+  cout << "Masukkan jumlah baris matriks: ";
+  cin >> b;
+  cout << "Masukkan jumlah kolom matriks: ";
+  cin >> k;
+
+  cout << "Masukkan elemen matriks\n";
+  for (i = 0; i < b; i++){
+    for (j = 0; j < k; j++){
+      cin  >> matriks[i][j];
+    }
+  }
+
+  for (i = 0; i < b; i++){
+    for (j = 0; j < k; j++){
+      transpose[j][i] = matriks[i][j];
+    }
+  }
+
+  cout << "Hasil Transpose Matriks: \n";
+  for (i = 0; i < k; i++){
+    for (j = 0; j < b; j++){
+      cout << transpose[i][j] << "\t";
+    }
+    cout << endl;
+  }
+}
